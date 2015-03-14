@@ -9,11 +9,13 @@ sudo apt-get update
 sudo apt-get -y install r-base r-base-dev
 sudo R -e "install.packages('shiny', repos = 'http://cran.rstudio.com/', dep = TRUE)"
 sudo R -e "install.packages('rmarkdown', repos = 'http://cran.rstudio.com/', dep = TRUE)"
+sudo R -e "install.packages('RColorBrewer', repos = 'http://cran.rstudio.com/', dep = TRUE)"
 sudo apt-get -y install gdebi-core
 wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.3.0.403-amd64.deb
 shiny-server-1.3.0.403-amd64.deb
 sudo dpkg -i *.deb
 rm *.deb
 
-#  Set the applicaiton directory to point to the vagrant share. 
+#  Set the applicaiton directory to point to the vagrant share.
 sudo ln -s /vagrant/apps /srv/shiny-server
+sudo ln -s /vagrant/log/shiny-server.log /var/log/shiny-server.log

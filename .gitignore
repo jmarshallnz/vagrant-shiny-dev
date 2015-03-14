@@ -1,3 +1,4 @@
 .vagrant*
 
-apps/AK-Tufte-plot-shiny-app/
+*.log
+apps/*
